@@ -237,7 +237,8 @@ img {
 .modal {
     position: fixed;
     width: 408px;
-    min-height: 576px;
+    min-height: 584px;
+    padding-bottom: 24px;
     background: var(--cloud);
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
@@ -250,6 +251,131 @@ img {
 
 .backdrop.is-hidden .modal {
     transform: translate(-50%, -50%) scale(0);
+}
+
+.modal-title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: var(--navy-blue);
+    margin-top: 72px;
+    margin-bottom: 16px;
+}
+
+.modal-group {
+    margin-top: 8px;
+    margin-left: 24px;
+}
+
+.modal-label {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.04em;
+    color: var(--light-slate);
+}
+
+.input-group {
+    position: relative;
+}
+
+.input-field {
+    padding-left: 38px;
+}
+
+.modal-form-input {
+    display: block;
+    width: 360px;
+    height: 40px;
+    padding-left: 38px;
+    outline: transparent;
+    border: 1px solid var(--navy-blue);
+    border-radius: 4px;
+}
+
+.modal-form-input:focus {
+    border: 1px solid var(--iris);
+}
+
+.input-icon {
+    position: absolute;
+    top: 11px;
+    left: 16px;
+    fill: currentColor;
+}
+
+.modal-form-input:focus + .input-icon {
+    fill: var(--iris)
+}
+
+.comment-input {
+    resize: none;
+    padding: 8px 16px;
+    height: 120px;
+    text-align: justify;
+}
+
+.comment-input::placeholder {
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.04em;
+    color: rgba(117, 117, 117, 0.5);
+}
+
+.policy-group {
+    margin-top: 16px;
+    margin-left: 24px;
+}
+
+.policy-checkbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: absolute;
+}
+
+.check-icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 1.25px solid var(--navy-blue);
+    border-radius: 2px;
+    margin-right: 8px;
+    transition-property: border-color, background-color, background-image;
+    transition-duration: 250ms;
+    transition-timing-function: var(--timing);
+}
+
+.policy-checkbox:checked + .check-icon {
+    border-color: var(--ocean);
+    background-color: var(--ocean);
+    background-image: url('../images/full-check.svg');
+    background-size: contain;
+    background-origin: border-box;
+}
+
+.policy-label {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.04em;
+    color: var(--light-slate);
+}
+
+.policy-link {
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.04em;
+    color: var(--iris);
+}
+
+.modal-btn {
+    margin-top: 24px;
 }
 
 .visually-hidden {
@@ -269,7 +395,6 @@ img {
     padding: 0;
     margin: 0;
     list-style: none;
-
     display: flex;
 }
 
@@ -635,5 +760,58 @@ img {
 
 .footer-social-icon {
     fill: currentColor;
+}
+
+.footer-subscribe {
+    margin-left: 80px;
+}
+
+/*.footer-social-title {}*/
+
+.footer-form {
+    display: flex;
+    align-items: center;
+}
+
+.form-input {
+    width: 264px;
+    height: 40px;
+    margin-top: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    padding-left: 16px;
+    background-color: var(--navy-blue);
+    color: var(--white);
+}
+
+.footer-form-btn {
+    display: flex;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: var(--white);
+    background-color: var(--iris);
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    min-width: 165px;
+    padding: 8px 24px;
+    margin-top: 16px;
+    margin-left: 24px;
+    transition: background-color 250ms var(--timing);
+}
+
+
+.footer-form-btn:hover,
+.footer-form-btn:focus {
+    background-color: var(--ocean);
+}
+
+.footer-send {
+    fill: currentColor;
+    margin-left: 16px;
 }
 /*-----------------footer-----------------*/
